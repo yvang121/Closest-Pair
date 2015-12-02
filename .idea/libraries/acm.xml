@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="acm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/acm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javatuples-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/acm.jar!/" />
+    </SOURCES>
+  </library>
+</component>
