@@ -32,9 +32,10 @@ public class ClosestPair {
      * @return a triplet containing the two points closest to each other, and the distance between them
      */
     public Triplet<GPoint, GPoint, Double> findClosestDist(ArrayList<GPoint> sortedByX, ArrayList<GPoint> sortedByY) {
-        double minDist = Double.POSITIVE_INFINITY;
+        Triplet<GPoint, GPoint, Double> ans;
         if (sortedByX.size() <= 3) {   // if less than or equal to 3 GPoints left
-            return bruteForce(this.coordinates);  // brute force it
+            ans = bruteForce(this.coordinates);
+            return ans;  // brute force it
         } else {
             int mid = (int)Math.floor(sortedByX.size()/2);
             ArrayList<GPoint> half1X = new ArrayList<GPoint>(mid);
@@ -53,9 +54,38 @@ public class ClosestPair {
             Triplet<GPoint, GPoint, Double> triplet1 = findClosestDist(half1X, half1Y);
             Triplet<GPoint, GPoint, Double> triplet2 = findClosestDist(half2X, half2Y);
             double minDistOfHalves = Math.min(triplet1.getValue2(), triplet2.getValue2());
-            GPoint midPoint = coordinates.get(mid);
+            double midPoint = coordinates.get(mid + 1).getX();
+            ArrayList<GPoint> marginPoints = new ArrayList<GPoint>();
+            for (int i = 0; i < sortedByY.size(); i++) {
+                double xVal = sortedByY.get(i).getX();
+                if (Math.abs(xVal - midPoint) < minDistOfHalves) {
+                    marginPoints.add(sortedByY.get(i));
+                }
+            }
+
+            double minSq = minDistOfHalves*minDistOfHalves;
+            GPoint minPoint1 = null;
+            GPoint minPoint2 = null;
+            for (int i = 0; i <= marginPoints.size()-2; i++) {
+                int j = i + 1;
+                double point1Y = marginPoints.get(j).getY();
+                double point2Y = marginPoints.get(i).getY();
+                int difference = (int)(point1Y - point2Y);
+                while (j <= marginPoints.size()-1 & (Math.pow(difference, 2) < minSq)) {
+                    double calcYDist = calcDistance(marginPoints.get(i), marginPoints.get(j));
+                    if (calcYDist*calcYDist < minSq) {
+                        minSq = calcYDist*calcYDist;
+                        minPoint1 = marginPoints.get(i);
+                        minPoint2 = marginPoints.get(j);
+                    }
+                    minSq = Math.min(calcYDist*calcYDist, minSq);
+                    j++;
+                }
+            }
+            minDistOfHalves = Math.sqrt(minSq);
+            ans = new Triplet<GPoint, GPoint, Double>(minPoint1, minPoint2, minDistOfHalves);
         }
-        return bruteForce(this.coordinates);
+        return ans;
     }
 
     /**
