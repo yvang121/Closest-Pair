@@ -24,9 +24,7 @@ public class ClosestPair {
         this.yCoordSort = sortByY(coordList);
         this.closestPairDist = findClosestDist(xCoordSort, yCoordSort).getValue2();
     }
-    //Hello
-    String name = "Mitchell";
-    
+
     /**
      * Finds the closest pair of GPoints within the GUI
      * @param sortedByX sorted list by x-coordinate
