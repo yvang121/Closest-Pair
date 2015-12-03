@@ -18,15 +18,14 @@ public class ClosestPair {
         this.coordinates = coordList;
         this.xCoordSort = sortByX(coordList);
         this.yCoordSort = sortByY(coordList);
-        this.closestPairDist = findClosestDist(xCoordSort, yCoordSort);
+        this.closestPairDist = findClosestDist(xCoordSort, yCoordSort).getValue2();
     }
 
-    public double findClosestDist(ArrayList<GPoint> sortedByX, ArrayList<GPoint> sortedByY) {
+    public Triplet<GPoint, GPoint, Double> findClosestDist(ArrayList<GPoint> sortedByX, ArrayList<GPoint> sortedByY) {
         double minDist = Double.POSITIVE_INFINITY;
         if (sortedByX.size() <= 3) {
-            minDist = bruteForce(this.coordinates).getValue2();
+            return bruteForce(this.coordinates);
         } else {
-            //TODO: implement arraylist for gpoints
             int mid = (int)Math.floor(sortedByX.size()/2);
             ArrayList<GPoint> half1X = new ArrayList<GPoint>(mid);
             ArrayList<GPoint> half1Y = new ArrayList<GPoint>(mid);
@@ -41,12 +40,12 @@ public class ClosestPair {
                 half2Y.add(sortedByY.get(i));
             }
 
-            double dist1 = findClosestDist(half1X, half1Y);
-            double dist2 = findClosestDist(half2X, half2Y);
-            double minDistOfHalves = Math.min(dist1, dist2);
+            Triplet<GPoint, GPoint, Double> triplet1 = findClosestDist(half1X, half1Y);
+            Triplet<GPoint, GPoint, Double> triplet2 = findClosestDist(half2X, half2Y);
+            double minDistOfHalves = Math.min(triplet1.getValue2(), triplet2.getValue2());
             GPoint midPoint = coordinates.get(mid);
         }
-        return minDist;
+        return bruteForce(this.coordinates);
     }
 
     /**
