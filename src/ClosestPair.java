@@ -50,10 +50,20 @@ public class ClosestPair {
                 half2X.add(sortedByX.get(i));
                 half2Y.add(sortedByY.get(i));
             }
-
+            double minDistOfHalves;
+            GPoint minPoint1;
+            GPoint minPoint2;
             Triplet<GPoint, GPoint, Double> triplet1 = findClosestDist(half1X, half1Y);
             Triplet<GPoint, GPoint, Double> triplet2 = findClosestDist(half2X, half2Y);
-            double minDistOfHalves = Math.min(triplet1.getValue2(), triplet2.getValue2());
+            if (triplet1.getValue2() < triplet2.getValue2()) {
+                minDistOfHalves = triplet1.getValue2();
+                minPoint1 = triplet1.getValue0();
+                minPoint2 = triplet1.getValue1();
+            } else {
+                minDistOfHalves = triplet2.getValue2();
+                minPoint1 = triplet2.getValue0();
+                minPoint2 = triplet2.getValue1();
+            }
             double midPoint = coordinates.get(mid + 1).getX();
             ArrayList<GPoint> marginPoints = new ArrayList<GPoint>();
             for (int i = 0; i < sortedByY.size(); i++) {
@@ -64,8 +74,6 @@ public class ClosestPair {
             }
 
             double minSq = minDistOfHalves*minDistOfHalves;
-            GPoint minPoint1 = null;
-            GPoint minPoint2 = null;
             for (int i = 0; i <= marginPoints.size()-2; i++) {
                 int j = i + 1;
                 double point1Y = marginPoints.get(j).getY();
