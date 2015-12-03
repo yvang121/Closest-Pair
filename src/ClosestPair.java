@@ -14,6 +14,10 @@ public class ClosestPair {
     private ArrayList<GPoint> yCoordSort = new ArrayList<GPoint>();
     private double closestPairDist;
 
+    /**
+     * Constructor method
+     * @param coordList that's not necessarily sorted, but a list of GPoints
+     */
     public ClosestPair(ArrayList<GPoint> coordList) {
         this.coordinates = coordList;
         this.xCoordSort = sortByX(coordList);
@@ -21,10 +25,16 @@ public class ClosestPair {
         this.closestPairDist = findClosestDist(xCoordSort, yCoordSort).getValue2();
     }
 
+    /**
+     * Finds the closest pair of GPoints within the GUI
+     * @param sortedByX sorted list by x-coordinate
+     * @param sortedByY sorted list by y-coordinate
+     * @return a triplet containing the two points closest to each other, and the distance between them
+     */
     public Triplet<GPoint, GPoint, Double> findClosestDist(ArrayList<GPoint> sortedByX, ArrayList<GPoint> sortedByY) {
         double minDist = Double.POSITIVE_INFINITY;
-        if (sortedByX.size() <= 3) {
-            return bruteForce(this.coordinates);
+        if (sortedByX.size() <= 3) {   // if less than or equal to 3 GPoints left
+            return bruteForce(this.coordinates);  // brute force it
         } else {
             int mid = (int)Math.floor(sortedByX.size()/2);
             ArrayList<GPoint> half1X = new ArrayList<GPoint>(mid);
@@ -50,7 +60,7 @@ public class ClosestPair {
 
     /**
      * Finds the minimum distance between all points in the input list
-     * @param coordList unsorted GPoint list that's less than 3
+     * @param coordList unsorted GPoint list that's less than or equal to 3
      * @return a 3-tuple of the two points being the closest to each other, with the distance between them as the last
      * value.
      */
@@ -71,10 +81,21 @@ public class ClosestPair {
         return Triplet.with(minPoint1, minPoint2, minDist);
     }
 
+    /**
+     * Calculates the distance between two points. Distance formula
+     * @param pt1 GPoint 1
+     * @param pt2 GPoint 2
+     * @return double primitive number type
+     */
     public double calcDistance(GPoint pt1, GPoint pt2) {
         return Math.sqrt( Math.pow((pt2.getX()-pt1.getX()),2) + Math.pow((pt2.getY()-pt1.getY()), 2) );
     }
 
+    /**
+     * Sorts a list of GPoints by the x-coordinate
+     * @param listOfCoords unsorted list of GPoints
+     * @return sorted cloned list by x-coordinates
+     */
     public ArrayList<GPoint> sortByX(ArrayList<GPoint> listOfCoords) {
         ArrayList<GPoint> sortedList = new ArrayList<GPoint>(listOfCoords.size());
         for (GPoint pt : listOfCoords) {
@@ -85,6 +106,11 @@ public class ClosestPair {
         return sortedList;
     }
 
+    /**
+     * Sorts a list of GPoints by the y-coordinate
+     * @param listOfCoords unsorted list of GPoints
+     * @return sorted cloned list by y-coordinates
+     */
     public ArrayList<GPoint> sortByY(ArrayList<GPoint> listOfCoords) {
         ArrayList<GPoint> sortedList = new ArrayList<GPoint>(listOfCoords.size());
         for (GPoint pt : listOfCoords) {
@@ -95,6 +121,9 @@ public class ClosestPair {
         return sortedList;
     }
 
+    /**
+     * Comparator that sorts natural order taking a GPoint's x-coordinate
+     */
     static final Comparator<GPoint> X_NATURAL_ORDER = new Comparator<GPoint>() {
         @Override
         public int compare(GPoint o1, GPoint o2) {
@@ -102,6 +131,9 @@ public class ClosestPair {
         }
     };
 
+    /**
+     * Comparator that sorts natural order taking a GPoint's y-coordinate
+     */
     static final Comparator<GPoint> Y_NATURAL_ORDER =  new Comparator<GPoint>() {
         @Override
         public int compare(GPoint o1, GPoint o2) {
@@ -110,6 +142,7 @@ public class ClosestPair {
     };
 
 
+    // Getters and setters -----------------------------------------------------------------
     public ArrayList<GPoint> getCoordinates() {
         return coordinates;
     }
