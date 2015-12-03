@@ -1,4 +1,5 @@
 import acm.graphics.GPoint;
+import org.javatuples.Triplet;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -23,6 +24,9 @@ public class ClosestPairTest {
         System.out.println("Pre-sort: " + coord);
         System.out.println("Sorted by x-coordinate: " + closestPair.sortByX(coord));
         System.out.println("Sorted by y-coordinate: " + closestPair.sortByY(coord));
-        assertEquals(65.0, closestPair.findClosestDist(closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords()));
+        Triplet<GPoint, GPoint, Double> triplet = closestPair
+                .findClosestDist(closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords());
+        assertEquals(65.0, triplet.getValue2());
+        System.out.println(triplet.getValue0().toString() +","+ triplet.getValue1().toString());
     }
 }
