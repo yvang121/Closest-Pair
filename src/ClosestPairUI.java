@@ -1,7 +1,10 @@
+import acm.graphics.GLabel;
 import acm.graphics.GOval;
 import acm.graphics.GPoint;
 import acm.program.GraphicsProgram;
+import org.javatuples.Triplet;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -11,7 +14,7 @@ import java.util.ArrayList;
  */
 public class ClosestPairUI extends GraphicsProgram {
     private ArrayList<GPoint> coordinates = new ArrayList<GPoint>();
-    private static final int CIRCLE_RADIUS = 15;
+    private static final int CIRCLE_RADIUS = 10;
 
     public void init() {
         addMouseListeners();
@@ -19,12 +22,27 @@ public class ClosestPairUI extends GraphicsProgram {
     }
 
     public void run() {
+        Label minDistance = new Label("Minimum distance");
+        Double distance = 0.0;
         while (true) {
-            if (coordinates.size() > 1 ) {
+            GPoint pt1 = new GPoint();
+            GPoint pt2 = new GPoint();
+            if (coordinates.size() > 1) {
                 ClosestPair closestPair = new ClosestPair(coordinates);
-                System.out.println(closestPair.
-                        findClosestDist(closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords())
-                .getValue2());
+                Triplet<GPoint, GPoint, Double> triplet = closestPair.findClosestDist(
+                        closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords());
+                distance = triplet.getValue2();
+                pt1 = triplet.getValue0();
+                pt2 = triplet.getValue1();
+            }
+            if (getComponentAt(30, 30) != null) {
+                remove(getComponentAt(30,30));
+                GLabel distLabel = new GLabel(distance.toString());
+                GLabel pt1Label = new GLabel(pt1.toString());
+                GLabel pt2Label = new GLabel(pt2.toString());
+                add(distLabel, 30,30);
+//                add(pt1Label, distLabel.getX() + distLabel.getWidth(), pt1Label.getHeight());
+//                add(pt2Label, distLabel.getX() + distLabel.getWidth() + pt1Label.getWidth(), pt2Label.getHeight());
             }
         }
     }
@@ -32,6 +50,7 @@ public class ClosestPairUI extends GraphicsProgram {
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
             pause(250);
+            System.out.println(coordinates.size());
             System.exit(0);
         }
     }
@@ -40,6 +59,8 @@ public class ClosestPairUI extends GraphicsProgram {
         GPoint point = new GPoint(e.getX(), e.getY());
         coordinates.add(point);
         GOval circle = new GOval(CIRCLE_RADIUS, CIRCLE_RADIUS);
+        circle.setFilled(true);
+        circle.setFillColor(Color.BLACK);
         add(circle, e.getX(), e.getY());
     }
 }
