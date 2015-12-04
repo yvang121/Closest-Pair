@@ -2,7 +2,6 @@ import acm.graphics.GLabel;
 import acm.graphics.GOval;
 import acm.graphics.GPoint;
 import acm.program.GraphicsProgram;
-import org.javatuples.Triplet;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -24,27 +23,21 @@ public class ClosestPairUI extends GraphicsProgram {
     public void run() {
         Label minDistance = new Label("Minimum distance");
         Double distance = 0.0;
-        while (true) {
-            GPoint pt1 = new GPoint();
-            GPoint pt2 = new GPoint();
-            if (coordinates.size() > 1) {
-                ClosestPair closestPair = new ClosestPair(coordinates);
-                Triplet<GPoint, GPoint, Double> triplet = closestPair.findClosestDist(
-                        closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords());
-                distance = triplet.getValue2();
-                pt1 = triplet.getValue0();
-                pt2 = triplet.getValue1();
-            }
-            if (getComponentAt(30, 30) != null) {
-                remove(getComponentAt(30,30));
-                GLabel distLabel = new GLabel(distance.toString());
-                GLabel pt1Label = new GLabel(pt1.toString());
-                GLabel pt2Label = new GLabel(pt2.toString());
-                add(distLabel, 30,30);
-//                add(pt1Label, distLabel.getX() + distLabel.getWidth(), pt1Label.getHeight());
-//                add(pt2Label, distLabel.getX() + distLabel.getWidth() + pt1Label.getWidth(), pt2Label.getHeight());
-            }
-        }
+        GLabel distLabel = new GLabel(distance.toString());
+        add(distLabel, 30, 30);
+        //todo: what if for every click, we simply updated it once instead of constantly
+//        while (true) {
+//            GPoint pt1 = new GPoint();
+//            GPoint pt2 = new GPoint();
+//            if (coordinates.size() > 1) {
+//                ClosestPair closestPair = new ClosestPair(coordinates);
+//                Triplet<GPoint, GPoint, Double> triplet = closestPair.findClosestDist(
+//                        closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords());
+//                distance = triplet.getValue2();
+//                pt1 = triplet.getValue0();
+//                pt2 = triplet.getValue1();
+//            }
+//        }
     }
 
     public void keyPressed(KeyEvent e) {
