@@ -25,7 +25,7 @@ public class ClosestPairUI extends GraphicsProgram {
         Double distance = 0.0;
         GLabel distLabel = new GLabel(distance.toString());
         add(distLabel, 30, 30);
-        //todo: what if for every click, we simply updated it once instead of constantly
+        //todo: what if for every click, we simply updated it once instead of
 //        while (true) {
 //            GPoint pt1 = new GPoint();
 //            GPoint pt2 = new GPoint();
