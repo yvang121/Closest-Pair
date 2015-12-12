@@ -2,6 +2,7 @@ import acm.graphics.GLabel;
 import acm.graphics.GOval;
 import acm.graphics.GPoint;
 import acm.program.GraphicsProgram;
+import org.javatuples.Triplet;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -10,10 +11,17 @@ import java.util.ArrayList;
 
 /**
  * Created by Ye on 12/2/2015.
+ * Closest-pair implementation.
  */
 public class ClosestPairUI extends GraphicsProgram {
-    private ArrayList<GPoint> coordinates = new ArrayList<GPoint>();
-    private static final int CIRCLE_RADIUS = 10;
+    private ArrayList<GPoint> coordinates = new ArrayList<GPoint>(); // ArrayList containing all GPoints on canvas.
+    private GPoint[] closestPoints = new GPoint[2];  // Array containing the two closest GPoints.
+    private GLabel distLabel;  // The label containing the string type of the distance. This has to be dynamic
+    private static final int CIRCLE_RADIUS = 10; // Radius of all circle points.
+    private static final Color defaultC = new Color(0, 76, 153); // Color for default non-closest pair points.
+    private static final Color closePtC = new Color(250, 160, 24); // Color for the two closest pair points.
+    private static final GOval cpOverlay1 = new GOval(CIRCLE_RADIUS, CIRCLE_RADIUS); // Overlay closest pt1 with orange
+    private static final GOval cpOverlay2 = new GOval(CIRCLE_RADIUS, CIRCLE_RADIUS); // Overlay closest pt2 with orange
 
     public void init() {
         addMouseListeners();
@@ -21,23 +29,14 @@ public class ClosestPairUI extends GraphicsProgram {
     }
 
     public void run() {
-        Label minDistance = new Label("Minimum distance");
-        Double distance = 0.0;
-        GLabel distLabel = new GLabel(distance.toString());
-        add(distLabel, 30, 30);
-        //todo: what if for every click, we simply updated it once instead of
-//        while (true) {
-//            GPoint pt1 = new GPoint();
-//            GPoint pt2 = new GPoint();
-//            if (coordinates.size() > 1) {
-//                ClosestPair closestPair = new ClosestPair(coordinates);
-//                Triplet<GPoint, GPoint, Double> triplet = closestPair.findClosestDist(
-//                        closestPair.getSortedByXCoords(), closestPair.getSortedByYCoords());
-//                distance = triplet.getValue2();
-//                pt1 = triplet.getValue0();
-//                pt2 = triplet.getValue1();
-//            }
-//        }
+        GLabel minDistance = new GLabel("Minimum distance:"); // Label stating the minimum distance
+        add(minDistance, 10, 10);
+        ClosestPair cp = new ClosestPair(coordinates);  // Calculate initial null distance (infinity)
+        ArrayList<GPoint> x = cp.getSortedByXCoords();
+        ArrayList<GPoint> y = cp.getSortedByYCoords();
+        double dist = cp.findClosestDist(x, y).getValue2();
+        distLabel = new GLabel(Double.toString(dist) + " pixels");
+        add(distLabel, 10, 30);
     }
 
     public void keyPressed(KeyEvent e) {
@@ -48,12 +47,41 @@ public class ClosestPairUI extends GraphicsProgram {
         }
     }
 
+    /**
+     * Every time the mouse is clicked, it adds a new default point (blue) and calculates for a new closest-pair
+     * if there is one. If so, store these points into the closestPoints array and set the distance label to the
+     * new calculated distance. Move overlay orange points to designate which two points are now the closest-pair.
+     * @param e
+     */
     public void mouseClicked(MouseEvent e) {
         GPoint point = new GPoint(e.getX(), e.getY());
         coordinates.add(point);
+
+        ClosestPair cp = new ClosestPair(coordinates);
+        ArrayList<GPoint> x = cp.getSortedByXCoords();
+        ArrayList<GPoint> y = cp.getSortedByYCoords();
+        Triplet<GPoint, GPoint, Double> triplet = cp.findClosestDist(x, y);
+        if (!distLabel.getLabel().equals(Double.toString(triplet.getValue2()))) {
+            closestPoints[0] = triplet.getValue0();
+            closestPoints[1] = triplet.getValue1();
+        }
+        double dist = cp.findClosestDist(x, y).getValue2();
+        distLabel.setLabel(Double.toString(dist) + " pixels");
+
         GOval circle = new GOval(CIRCLE_RADIUS, CIRCLE_RADIUS);
         circle.setFilled(true);
-        circle.setFillColor(Color.BLACK);
+        circle.setFillColor(defaultC);
+
+        cpOverlay1.setFilled(true);
+        cpOverlay1.setColor(closePtC);
+        cpOverlay2.setFilled(true);
+        cpOverlay2.setColor(closePtC);
+
         add(circle, e.getX(), e.getY());
+        if (closestPoints[0] != null && closestPoints[1] != null) {
+            add(cpOverlay1, closestPoints[0].getX(), closestPoints[0].getY());
+            add(cpOverlay2, closestPoints[1].getX(), closestPoints[1].getY());
+        }
+        System.out.println(dist);
     }
 }
