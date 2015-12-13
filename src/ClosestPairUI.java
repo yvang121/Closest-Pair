@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Ye on 12/2/2015.
- * Closest-pair implementation.
+ * Closest-pair Graphical User-Interface implementation.
  */
 public class ClosestPairUI extends GraphicsProgram {
     private ArrayList<GPoint> coordinates = new ArrayList<GPoint>(); // ArrayList containing all GPoints on canvas.

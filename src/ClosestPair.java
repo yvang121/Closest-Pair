@@ -7,6 +7,7 @@ import java.util.Comparator;
 
 /**
  * Created by Ye on 11/16/2015.
+ * Closest-Pair implementation in O(n log n).
  */
 public class ClosestPair {
     private ArrayList<GPoint> coordinates;
@@ -16,7 +17,7 @@ public class ClosestPair {
 
     /**
      * Constructor method
-     * @param coordList that's not necessarily sorted, but a list of GPoints
+     * @param coordList A list of unsorted GPoints
      */
     public ClosestPair(ArrayList<GPoint> coordList) {
         this.coordinates = coordList;
@@ -34,47 +35,48 @@ public class ClosestPair {
     public Triplet<GPoint, GPoint, Double> findClosestDist(ArrayList<GPoint> sortedByX, ArrayList<GPoint> sortedByY) {
         Triplet<GPoint, GPoint, Double> ans;
         if (sortedByX.size() <= 3) {   // if less than or equal to 3 GPoints left
-            ans = bruteForce(this.coordinates);
-            return ans;  // brute force it
+            ans = bruteForce(this.coordinates); // brute force it
+            return ans;
         } else {
-            int mid = (int)Math.floor(sortedByX.size()/2);
-            ArrayList<GPoint> half1X = new ArrayList<GPoint>(mid);
-            ArrayList<GPoint> half1Y = new ArrayList<GPoint>(mid);
-            ArrayList<GPoint> half2X = new ArrayList<GPoint>(sortedByX.size() - mid);
-            ArrayList<GPoint> half2Y = new ArrayList<GPoint>(sortedByY.size() - mid);
-            for (int i = 0; i <= mid; i++) {
+            int mid = (int)Math.floor(sortedByX.size()/2); // Midpoint is half the size of the sorted list
+            ArrayList<GPoint> half1X = new ArrayList<GPoint>(mid);  // ArrayList for first half of X
+            ArrayList<GPoint> half1Y = new ArrayList<GPoint>(mid);  // ArrayList for first half of Y
+            ArrayList<GPoint> half2X = new ArrayList<GPoint>(sortedByX.size() - mid); // Second half of X
+            ArrayList<GPoint> half2Y = new ArrayList<GPoint>(sortedByY.size() - mid); // Second half of Y
+            for (int i = 0; i <= mid; i++) { // Add into ArrayList1s if less than midpoint
                 half1X.add(sortedByX.get(i));
                 half1Y.add(sortedByY.get(i));
             }
-            for (int i = mid + 1; i < sortedByX.size(); i++) {
+            for (int i = mid + 1; i < sortedByX.size(); i++) { // add into ArrayList2s if greater than midpoint
                 half2X.add(sortedByX.get(i));
                 half2Y.add(sortedByY.get(i));
             }
-            double minDistOfHalves;
+            double minDistOfHalves;  // Initialize variables to put into triplet return variable.
             GPoint minPoint1;
             GPoint minPoint2;
-            Triplet<GPoint, GPoint, Double> triplet1 = findClosestDist(half1X, half1Y);
-            Triplet<GPoint, GPoint, Double> triplet2 = findClosestDist(half2X, half2Y);
-            if (triplet1.getValue2() < triplet2.getValue2()) {
-                minDistOfHalves = triplet1.getValue2();
+            Triplet<GPoint, GPoint, Double> triplet1 = findClosestDist(half1X, half1Y); // Recurse into 1st half
+            Triplet<GPoint, GPoint, Double> triplet2 = findClosestDist(half2X, half2Y); // Recurse into 2nd half
+            if (triplet1.getValue2() < triplet2.getValue2()) {  // If first half yields shorter distance
+                minDistOfHalves = triplet1.getValue2();  // Store Gpoint1/Gpoint2/Distance between them
                 minPoint1 = triplet1.getValue0();
                 minPoint2 = triplet1.getValue1();
             } else {
-                minDistOfHalves = triplet2.getValue2();
+                minDistOfHalves = triplet2.getValue2();  // else store second half information
                 minPoint1 = triplet2.getValue0();
                 minPoint2 = triplet2.getValue1();
             }
-            double midPoint = coordinates.get(mid + 1).getX();
+            double midPoint = coordinates.get(mid + 1).getX();  // Get the X-coordinate of midpoint + 1
             ArrayList<GPoint> marginPoints = new ArrayList<GPoint>();
             for (int i = 0; i < sortedByY.size(); i++) {
-                double xVal = sortedByY.get(i).getX();
+                double xVal = sortedByY.get(i).getX(); // Determine if Y-coordinate of these points is < midPoint
                 if (Math.abs(xVal - midPoint) < minDistOfHalves) {
                     marginPoints.add(sortedByY.get(i));
                 }
             }
 
             double minSq = minDistOfHalves*minDistOfHalves;
-            for (int i = 0; i <= marginPoints.size()-2; i++) {
+            for (int i = 0; i <= marginPoints.size()-2; i++) {  // Loop through Y-coordinates and determine if lower
+                // than the current lowest values.
                 int j = i + 1;
                 double point1Y = marginPoints.get(j).getY();
                 double point2Y = marginPoints.get(i).getY();
@@ -91,6 +93,7 @@ public class ClosestPair {
                 }
             }
             minDistOfHalves = Math.sqrt(minSq);
+            // Return a 3-tuple containing 1st point, 2nd point and distance between them.
             ans = new Triplet<GPoint, GPoint, Double>(minPoint1, minPoint2, minDistOfHalves);
         }
         return ans;
