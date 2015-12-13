@@ -84,4 +84,8 @@ public class ClosestPairUI extends GraphicsProgram {
         }
         System.out.println(dist);
     }
+
+    public static void main(String[] args) {
+        new ClosestPairUI().start(args);
+    }
 }
