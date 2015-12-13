@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e3108d8-6cc4-4aa4-8a0a-93e3b4104329" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPair$1.class" afterPath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPair$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPair$2.class" afterPath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPair$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPair.class" afterPath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPair.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Closest-Pair/ClosestPairTest.class" afterPath="$PROJECT_DIR$/out/test/Closest-Pair/ClosestPairTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPairUI.class" afterPath="$PROJECT_DIR$/out/production/Closest-Pair/ClosestPairUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClosestPairUI.java" afterPath="$PROJECT_DIR$/src/ClosestPairUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Closest-Pair.iws" />
@@ -37,27 +31,12 @@
       <file leaf-file-name="ClosestPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClosestPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2941">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2907">
               <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
                 <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
                 <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-                <element signature="e#7057#7058#0" expanded="false" />
-                <element signature="e#7124#7125#0" expanded="false" />
-                <element signature="e#7373#7374#0" expanded="false" />
-                <element signature="e#7440#7441#0" expanded="false" />
-                <element signature="e#7590#7591#0" expanded="false" />
-                <element signature="e#7624#7625#0" expanded="false" />
-                <element signature="e#7677#7678#0" expanded="false" />
-                <element signature="e#7710#7711#0" expanded="false" />
-                <element signature="e#7763#7764#0" expanded="false" />
-                <element signature="e#7796#7797#0" expanded="false" />
-                <element signature="e#7838#7839#0" expanded="false" />
-                <element signature="e#7876#7877#0" expanded="false" />
-                <element signature="e#7938#7939#0" expanded="false" />
-                <element signature="e#7992#7993#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,11 +45,23 @@
       <file leaf-file-name="ClosestPairUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClosestPairUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44894367" vertical-offset="204" max-vertical-offset="1105">
-              <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.734748" vertical-offset="862" max-vertical-offset="1649">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3809#3810#0" expanded="true" />
+                <element signature="e#3856#3857#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,7 +69,7 @@
       <file leaf-file-name="ClosestPairTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ClosestPairTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="714">
+            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="646">
               <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding />
             </state>
@@ -136,8 +127,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,8 +159,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Closest-Pair" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Closest-Pair" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -588,6 +597,8 @@
       <workItem from="1449182662509" duration="972000" />
       <workItem from="1449200558438" duration="2709000" />
       <workItem from="1449353351385" duration="1288000" />
+      <workItem from="1450027811257" duration="142000" />
+      <workItem from="1450036639038" duration="113000" />
     </task>
     <task id="LOCAL-00001" summary="Successfully implemented brute force">
       <created>1449089829308</created>
@@ -677,7 +688,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20504000" />
+    <option name="totallyTimeSpent" value="20759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -686,6 +697,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550335" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -693,22 +705,21 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32495812" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3204698" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24281392" sideWeight="0.49916247" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24281392" sideWeight="0.49916247" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24281392" sideWeight="0.5008375" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39865997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39865997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550335" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3204698" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -757,24 +768,81 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2941">
           <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClosestPairUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1046" max-vertical-offset="1615">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ClosestPairTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="646">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClosestPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2941">
+          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+          <folding>
+            <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
+            <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
+            <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClosestPairUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ClosestPairTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="646">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClosestPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2941">
+          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+          <folding>
+            <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
+            <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
+            <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -785,6 +853,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -802,24 +872,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="3247">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,6 +885,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,24 +904,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="3332">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -875,6 +917,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -892,24 +936,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -928,6 +957,8 @@
           <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -937,24 +968,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -973,6 +989,8 @@
           <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -982,24 +1000,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1018,6 +1021,8 @@
           <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1051,39 +1056,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClosestPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2907">
           <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#calcDistance#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByX#0;class#ClosestPair#0" expanded="false" />
             <element signature="method#sortByY#0;class#ClosestPair#0" expanded="false" />
-            <element signature="e#7057#7058#0" expanded="false" />
-            <element signature="e#7124#7125#0" expanded="false" />
-            <element signature="e#7373#7374#0" expanded="false" />
-            <element signature="e#7440#7441#0" expanded="false" />
-            <element signature="e#7590#7591#0" expanded="false" />
-            <element signature="e#7624#7625#0" expanded="false" />
-            <element signature="e#7677#7678#0" expanded="false" />
-            <element signature="e#7710#7711#0" expanded="false" />
-            <element signature="e#7763#7764#0" expanded="false" />
-            <element signature="e#7796#7797#0" expanded="false" />
-            <element signature="e#7838#7839#0" expanded="false" />
-            <element signature="e#7876#7877#0" expanded="false" />
-            <element signature="e#7938#7939#0" expanded="false" />
-            <element signature="e#7992#7993#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClosestPairUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44894367" vertical-offset="204" max-vertical-offset="1105">
-          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.734748" vertical-offset="862" max-vertical-offset="1649">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
